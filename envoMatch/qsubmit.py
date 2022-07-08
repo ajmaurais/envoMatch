@@ -63,13 +63,13 @@ def main():
     parser.add_argument('-p', '--ppn', default=8, type=int,
                         help='Number of processors to allocate per job. Default is 8.')
 
-    parser.add_argument('--jobType', choices=['pbs', 'lsf'], default='pbs',
-                        help='Job type. Default is "pbs"')
+    parser.add_argument('--jobType', choices=['pbs', 'lsf'], default='lsf',
+                        help='Job type. Default is "lsf"')
 
     parser.add_argument('--shell', default='tcsh', help='The shell to use in job files')
 
-    parser.add_argument('-w', '--walltime', default='12:00:00',
-                        help='Walltime per job in the format hh:mm:ss. Default is 12:00:00.')
+    parser.add_argument('-w', '--walltime', default='4:00:00',
+                        help='Walltime per job in the format hh:mm:ss. Default is 4:00:00.')
 
     parser.add_argument('-g', '--go', action='store_true', default=False,
                         help='Should job be submitted? If this flag is not supplied, program will be a dry run. '
